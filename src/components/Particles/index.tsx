@@ -30,10 +30,10 @@ const Particles = () => {
         transition={{
           repeat: Infinity,
           repeatType: "mirror",
-          opacity: { duration: 1 },
+          opacity: { duration: 5 },
           duration: Math.ceil(Math.random() * 100) + 20,
         }}
-        className="absolute w-1 h-1 rounded-full bg-text/50 top-1/2 left-1/2 "
+        className="absolute w-1 h-1 rounded-full bg-text top-1/2 left-1/2 blur-sm"
       />
     ));
   }, []);

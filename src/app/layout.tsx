@@ -1,4 +1,9 @@
+import Particles from "@/components/Particles";
 import "./globals.css";
+
+export const metadata = {
+  title: "Daniel.",
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="w-full h-full">
-      <body className="w-full h-full">{children}</body>
+      <body className="relative w-full h-full bg-background">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+          <Particles />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

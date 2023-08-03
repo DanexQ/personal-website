@@ -10,14 +10,12 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
     <motion.span
       key={index}
       initial={{
-        x: `${randomXYStyle(200, 100)}%`,
-        y: `${randomXYStyle(200, 100)}%`,
         opacity: 0,
         letterSpacing: index === 1 ? "30px" : "1px",
       }}
-      animate={{ x: "0%", y: "0%", opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{ delay: index * 0.2 }}
-      className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent "
+      className="text-transparent bg-clip-text bg-gradient-to-br from-accent to-text/80 "
     >
       {char}
     </motion.span>
@@ -28,14 +26,12 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
       <motion.span
         key={index}
         initial={{
-          x: `${randomXYStyle(200, 100)}%`,
-          y: `${randomXYStyle(200, 100)}%`,
           opacity: 0,
           letterSpacing: index === 2 ? "30px" : "1px",
         }}
+        animate={{ opacity: 1 }}
         transition={{ delay: index * 0.2 }}
-        animate={{ x: "0%", y: "0%", opacity: 1 }}
-        className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent"
+        className="text-transparent bg-clip-text bg-gradient-to-br from-accent to-text/80"
       >
         {char}
       </motion.span>
@@ -43,8 +39,9 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
 
   return (
     <motion.div
-      exit={{ x: "-100%" }}
       key="intro"
+      initial={{ x: 0 }}
+      exit={{ x: "-100%" }}
       className="relative flex items-center justify-center w-full h-full overflow-hidden "
     >
       <AnimatePresence mode="wait">
@@ -58,7 +55,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-center w-full h-full overflow-hidden font-bold text-8xl text-primary drop-shadow-[5px_10px_10px_rgba(22,233,212,0.4)]"
+            className="flex items-center justify-center w-full h-full overflow-hidden font-bold text-8xl drop-shadow-[5px_5px_10px_#d5fbf750]"
           >
             <motion.div
               initial={{
@@ -96,7 +93,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
         )}
 
         {hideWelcome && (
-          <motion.div className="flex items-center flex-col gap-2 justify-center w-full h-full font-bold  text-primary drop-shadow-[5px_10px_10px_rgba(22,233,212,0.4)]">
+          <motion.div className="flex items-center flex-col gap-2 justify-center w-full h-full font-bold text-primary drop-shadow-[5px_5px_10px_#d5fbf750]">
             {/* I'm Daniel */}
             <motion.div
               className="flex items-center justify-center w-full overflow-hidden font-[800] sm:font-bold text-5xl sm:text-8xl"
@@ -130,6 +127,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
               animate={{ opacity: 1 }}
               transition={{ duration: 2.75 }}
             />
+
             {/* Come and see my world */}
             <motion.div
               key="comesee"
@@ -137,7 +135,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
                 opacity: 0,
               }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.75 }}
+              transition={{ delay: 2.75, duration: 3 }}
             >
               <motion.button
                 whileTap={{ scale: 0.9 }}
@@ -165,7 +163,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
                   color: { duration: 0.2 },
                   scale: { duration: 0.2 },
                 }}
-                className="text-base underline md:text-2xl"
+                className="text-base text-transparent md:text-2xl bg-clip-text bg-gradient-to-br from-accent to-text"
               >
                 Come and see my world! &rarr;
               </motion.button>

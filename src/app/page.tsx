@@ -2,18 +2,26 @@
 import Intro from "@/components/Intro";
 import Particles from "@/components/Particles";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Home() {
   const [hideIntro, setHideIntro] = useState(false);
+  const router = useRouter();
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-full bg-background">
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <Particles />
-      </div>
+    <div className="relative flex flex-col items-center justify-center w-full h-full ">
       <AnimatePresence mode="wait">
-        {!hideIntro && <Intro handleClick={() => setHideIntro(true)} />}
-        {hideIntro && <motion.div key="faktyczna">PAGE</motion.div>}
+        {!hideIntro && (
+          <Intro
+            handleClick={() => {
+              setHideIntro(true);
+              setTimeout(() => {
+                return router.push("/home");
+              }, 1000);
+            }}
+          />
+        )}
+        {hideIntro && <motion.div key="faktyczna" />}
       </AnimatePresence>
     </div>
   );
