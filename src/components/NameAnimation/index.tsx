@@ -1,13 +1,19 @@
 "use client";
 import { wordAnimation } from "@/lib/letterAnimation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
+import GithubIcon from "./GithubIcon.svg";
+import Link from "next/link";
+import Links from "../Links";
 
 const NameAnimation = () => {
   const [nameStatus, setNameStatus] = useState({
     firstName: false,
     lastName: false,
     title: false,
+    links: false,
+    gh: false,
   });
   const firstName = "Daniel";
   const lastName = "Szczepaniak";
@@ -21,7 +27,7 @@ const NameAnimation = () => {
       }}
       animate={{ opacity: 1 }}
       transition={{ delay: index * 0.1 }}
-      className="text-[150px] text-primary leading-[100px]"
+      className=" text-primary  text-5xl   sm:text-8xl  lg:text-[150px]"
     >
       {char}
     </motion.span>
@@ -34,7 +40,7 @@ const NameAnimation = () => {
       }}
       animate={{ opacity: 1 }}
       transition={{ delay: index * 0.1 }}
-      className="text-[150px] text-primary leading-[100px]"
+      className=" text-primary  text-5xl  sm:text-8xl lg:text-[150px]"
     >
       {char}
     </motion.span>
@@ -47,13 +53,14 @@ const NameAnimation = () => {
       }}
       animate={{ opacity: 1 }}
       transition={{ delay: index * 0.1 }}
-      className="text-3xl leading-[120px] text-text"
+      className="text-lg sm:text-3xl text-text "
     >
       {char}
     </motion.span>
   ));
+
   return (
-    <motion.div
+    <motion.header
       animate={{ opacity: [1, 0.5, 1] }}
       transition={{
         repeat: Infinity,
@@ -61,7 +68,7 @@ const NameAnimation = () => {
         duration: 5,
         delay: 5,
       }}
-      className="flex flex-col w-3/4  font-bold items-center text-primary min-h-[55vh] justify-center pt-[30px]"
+      className="flex flex-col items-center justify-center min-h-[90dvh] md:min-h-[85vh] font-bold text-primary "
     >
       <motion.div layout key="firstName">
         {firstNameElements}
@@ -77,7 +84,7 @@ const NameAnimation = () => {
         />
       </motion.div>
 
-      <motion.div layout key="lastName">
+      <motion.div layout key="lastName" className="">
         {nameStatus.firstName && lastNameElements}
         <motion.div
           initial={{
@@ -90,10 +97,32 @@ const NameAnimation = () => {
           }
         />
       </motion.div>
-      <motion.div layout key="title">
+      <motion.div layout key="title" className="py-3 lg:py-5">
         {nameStatus.lastName && titleElements}
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 5.5 }}
+          onAnimationComplete={() =>
+            setNameStatus((prev) => ({ ...prev, title: true }))
+          }
+        />
       </motion.div>
-    </motion.div>
+      {nameStatus.title && (
+        <motion.div
+          layout
+          key="links"
+          className="flex gap-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
+          <Links />
+        </motion.div>
+      )}
+    </motion.header>
   );
 };
 

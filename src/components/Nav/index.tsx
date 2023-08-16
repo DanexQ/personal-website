@@ -5,7 +5,6 @@ import MobileMenu from "./MobileMenu";
 const LINKS = [
   { url: "about", label: "About" },
   { url: "portfolio", label: "Portfolio" },
-  { url: "experience", label: "Experience" },
   { url: "contact", label: "Contact" },
 ];
 
@@ -22,7 +21,7 @@ const Nav = () => {
   ));
 
   return (
-    <nav className="relative flex items-center justify-between max-w-screen-lg px-10 py-5 mx-auto text-xl sm:px-3 max-w-3 text-text lg:px-0 bg-background/80">
+    <nav className="sticky top-0 flex items-center justify-between max-w-[1200px] px-10 py-3 mx-auto text-base md:text-xl md:py-5 sm:px-3 max-w-3 bg-background/90 text-text lg:px-0  backdrop-blur">
       <h1 className="z-40">Daniel.</h1>
       <ul className="z-40 hidden gap-5 font-semibold sm:flex">
         {linksElements}
