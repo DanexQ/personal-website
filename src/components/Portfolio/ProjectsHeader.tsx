@@ -15,6 +15,7 @@ const ProjectsHeader = () => {
       id="projects"
       content={content}
       reversed={false}
+      background=""
       header={["My", "Projects"]}
     />
     // <section className="flex flex-col-reverse items-center w-full gap-3 px-5 py-5 md:gap-0 md:p-10 md:flex-row bg-secondary/20 ">

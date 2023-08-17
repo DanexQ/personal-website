@@ -8,7 +8,7 @@ export default function Home() {
   const [hideIntro, setHideIntro] = useState(false);
   const router = useRouter();
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-full ">
+    <div className="relative flex flex-col items-center justify-center w-full h-[100vh]">
       <AnimatePresence mode="wait">
         {!hideIntro && (
           <Intro

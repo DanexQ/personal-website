@@ -11,7 +11,7 @@ const Projects = () => {
       // initial={{ opacity: 0 }}
       // animate={{ opacity: 1 }}
       // transition={{ delay: 6 }}
-      className="flex flex-col items-center w-full md:gap-10"
+      className="flex flex-col items-center w-full gap-5 md:gap-10 bg-secondary/60"
     >
       <ProjectsHeader />
       <ProjectsExamples />
