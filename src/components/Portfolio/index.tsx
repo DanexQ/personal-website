@@ -6,16 +6,13 @@ import ProjectsExamples from "./ProjectsExamples";
 
 const Projects = () => {
   return (
-    <motion.article
+    <motion.section
       id="portfolio"
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // transition={{ delay: 6 }}
-      className="flex flex-col items-center w-full gap-5 md:gap-10 bg-secondary/60"
+      className="flex flex-col items-center w-full gap-5 md:gap-6 bg-secondary/60 scroll-mt-[100px]"
     >
       <ProjectsHeader />
       <ProjectsExamples />
-    </motion.article>
+    </motion.section>
   );
 };
 

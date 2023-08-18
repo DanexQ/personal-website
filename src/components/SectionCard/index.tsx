@@ -18,7 +18,7 @@ const SectionCard = ({
   return (
     <section
       id={id}
-      className={`flex flex-col-reverse items-center w-full gap-3 px-5 py-5 md:gap-2 md:p-10 rounded-xl ${
+      className={`flex flex-col-reverse items-center w-full gap-3 px-5 py-5 md:gap-2 md:p-10 rounded-xl scroll-mt-[100px] ${
         reversed ? "md:flex-row-reverse " : "md:flex-row"
       } ${background}`}
     >
