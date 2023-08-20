@@ -9,14 +9,23 @@ import Link from "next/link";
 
 const ProjectsExamples = () => {
   return (
-    <section className="flex flex-col gap-5">
+    <section className="flex flex-col gap-5 backdrop-blur-[6px] ">
       <ProjectCard
         title="Prosta Matura"
         url="https://prosta-matura.vercel.app/"
         repoUrl="https://github.com/DanexQ/matura-collection-next.js"
         imageUrl={ProstaMaturaImg.src}
         lastCommit="August 1 2023"
-        content="I want you to present my first big project called Prosta Matura. This app was created for polish students studying for their advanced math matura exam. Throughout my career as a this year's high school graduate I couldn't find any type of website having all of the tasks of this exam in one place, so I did it. Everyone can use this app for free just sign in with google account. Prosta Matura is made with NextJS, React, NextAuth, Tailwind, Prisma and PlanetScale as database."
+        content="
+        Let me introduce you to my significant debut project, Prosta Matura. This initiative is designed to assist Polish students who are preparing for their advanced math matura examination. During my time as a high school graduate this year, I faced a challenge – there wasn't a comprehensive platform consolidating all the exam tasks in one location. Driven by this need, I took it upon myself to create Prosta Matura.  Everyone can use this app for free just sign in with google account."
+        tools={[
+          "React",
+          "Typescript",
+          "Next",
+          "Tailwind",
+          "Prisma",
+          "PlanetScale",
+        ]}
       />
       {/* <ProjectCard reverse={true} delayStart={1.5} /> */}
       <ProjectCard
@@ -41,10 +50,12 @@ const ProjectsExamples = () => {
             for it while I was making the website and for my friends that was
             using my &quot;blog&quot; and exercising before the exam. Pretty
             simple app without extended interactivity, nothing special, but I
-            think it&apos;s good to mention that, because this proves my
-            responsibility and that I am not scared of any challenges.
+            think it&apos;s good to mention that, because it underscored my
+            sense of responsibility and willingness to confront challenges
+            head-on.
           </>
         }
+        tools={["React", "Typescript", "Next", "Tailwind"]}
       />
       <ProjectCard
         title="Real chat app"
@@ -53,8 +64,9 @@ const ProjectsExamples = () => {
         imageUrl={RealChatApp.src}
         lastCommit="January 13 2023"
         content={
-          "Simple example of real chat app using Firebase, React with Typescript and Styled Components. My first bigger project. I learn a lot of new stuff here and solved too much errors that I wasn't aware of before. The last commit was 13 January 2023. I won't change anything in my code here because it's good to see how my skills changed. There are errors(no logic for search page) or missing some features like sorting chats, creating grups and other that I wanted to do, because of focusing on other projects and school. Someday I will continue this app but with my today's knowledge."
+          "Simple example of real chat app - my first bigger project. I encountered and solved various errors that were new to me. There are a few issues with the app, like missing logic for the search page and features such as chat sorting and creating groups. These were left out because I was focused on other projects and school commitments. I plan to come back to this app someday with my updated knowledge and continue working on it."
         }
+        tools={["React", "Typescript", "Styled-Components"]}
       />
       <ProjectCard
         title="Would you rather"
@@ -62,9 +74,8 @@ const ProjectsExamples = () => {
         repoUrl="https://github.com/DanexQ/would-you-rather"
         imageUrl={WouldYouRather.src}
         lastCommit="November 14 2022"
-        content={
-          "This app was created for my friends group to not to be bored during breaks between school lessons. I am very proud of this, because it gave us a lot of laughs and fun playing the game. It's a basic would you rather game. Also you can add your own cards if you would like to. Firebase, React with Typescript and Styled Components"
-        }
+        content={`I made this app for my friends' group to keep us entertained during school breaks. I take pride in it because it brought us much laughter and enjoyment while playing the simple "Would You Rather" game. The app also lets you create your own cards if you're interested.`}
+        tools={["React", "Typescript", "Styled-Components"]}
       />
       <ProjectCard
         title="Password generator"
@@ -73,8 +84,9 @@ const ProjectsExamples = () => {
         imageUrl={PasswordGenerator.src}
         lastCommit="September 30 2022"
         content={
-          "My first React app that I made by myself. I think I don't have to say how password generator works. Choose your conditions, pick some amount of characters and click Create. Simple as that. React with Typescript"
+          "Here's my first self-made React app. It's a password generator, and the mechanics are pretty straightforward. Just set your criteria, choose the character count, and hit Create. It's as simple as that."
         }
+        tools={["React", "Typescript", "Styled-Components"]}
       />
     </section>
   );

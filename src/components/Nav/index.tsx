@@ -5,6 +5,7 @@ import MobileMenu from "./MobileMenu";
 const LINKS = [
   { url: "about", label: "About" },
   { url: "portfolio", label: "Portfolio" },
+  { url: "education", label: "Education" },
   { url: "contact", label: "Contact" },
 ];
 
@@ -21,14 +22,18 @@ const Nav = () => {
   ));
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between max-w-[1200px] px-10 py-3 mx-auto text-base md:text-xl md:py-5 sm:px-3 max-w-3 bg-background/90 text-text lg:px-0  backdrop-blur z-40">
-      <h1>Daniel.</h1>
-      <ul className="hidden gap-5 font-semibold sm:flex">{linksElements}</ul>
-      <button className="px-4 py-2 font-semibold transition-all rounded-md md:font-base bg-text/80 sm:bg-transparent text-secondary sm:text-text hover:text-secondary hover:bg-text/80 hover:font-bold">
-        CV
-      </button>
-      <MobileMenu linksElements={[...linksElements]} />
-    </nav>
+    <header className="sticky top-0 z-40">
+      <nav className="relative flex items-center justify-between max-w-[1200px] px-10 py-3 mx-auto text-base md:text-xl md:py-5 sm:px-3 max-w-3 z-40 bg-background text-text lg:px-0 ">
+        <h1 className="z-40">Daniel.</h1>
+        <ul className="z-40 hidden gap-5 font-semibold sm:flex">
+          {linksElements}
+        </ul>
+        <button className="z-40 px-4 py-2 font-semibold transition-all rounded-md md:font-base bg-text/80 sm:bg-transparent text-secondary sm:text-text hover:text-secondary hover:bg-text/80 hover:font-bold">
+          CV
+        </button>
+        <MobileMenu linksElements={[...linksElements]} />
+      </nav>
+    </header>
   );
 };
 

@@ -18,6 +18,31 @@ const SectionCard = ({
   return (
     <section
       id={id}
+      className={`flex flex-col items-center w-full gap-3 sm:p-5 md:gap-5 md:p-10 rounded-xl scroll-mt-[100px] backdrop-blur-[6px]`}
+    >
+      <motion.h2
+        animate={{ opacity: [1, 0.5, 1] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 5,
+        }}
+        className="md:w-[30%] text-4xl md:text-5xl gap-4 font-semibold md:font-bold flex flex-row md:flex-col text-text items-center"
+      >
+        {headerMobile}
+      </motion.h2>
+      <p className="md:w-[70%] text-base md:text-lg text-text rounded-lg text-center">
+        {content}
+      </p>
+    </section>
+  );
+};
+
+export default SectionCard;
+
+{
+  /* <section
+      id={id}
       className={`flex flex-col-reverse items-center w-full gap-3 px-5 py-5 md:gap-2 md:p-10 rounded-xl scroll-mt-[100px] ${
         reversed ? "md:flex-row-reverse " : "md:flex-row"
       } ${background}`}
@@ -36,8 +61,5 @@ const SectionCard = ({
         <span className="hidden md:block">{header[0]}</span>
         <span className="hidden md:block">{header[1]}</span>
       </motion.h2>
-    </section>
-  );
-};
-
-export default SectionCard;
+    </section> */
+}

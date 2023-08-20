@@ -5,15 +5,15 @@ import { useInterval } from "usehooks-ts";
 import SectionCard from "../SectionCard";
 
 const AboutMe = () => {
-  const aboutMeText = `I'm Daniel, I'm 20-year-old and type of guy
-          with inexhaustible willingness to educate myself and big ambitions to
-          become Frontend Developer someday. I have graduated CKZIU w Zbąszynku
-          this year and I'm certificated IT Technician so my interest and
-          curiosity to coding, networking or servers is for a long time. While my journey 
-          into the world of coding is still unfolding, I'm driven by the prospect of 
-          creating beautiful and interactive web experiences that captivate users and 
-          solve real-world problems. Join me on my journey as I work hard to turn my 
-          dreams into reality.`;
+  const aboutMeText = `
+          Hey there, I'm Daniel, a 20-year-old with an insatiable thirst for learning 
+          and lofty aspirations of becoming a Frontend Developer. Freshly graduated 
+          from CKZIU w Zbąszynku this year with a certification as an IT Technician, 
+          my curiosity in coding, networking, and servers has been a long-standing 
+          affair. While my journey into the world of coding is still unfolding, I'm 
+          driven by the prospect of creating beautiful and interactive web experiences 
+          that captivate users and solve real-world problems. Join me on my journey as 
+          I work hard to turn my dreams into reality.`;
   const [index, setIndex] = useState(aboutMeText.length);
 
   useInterval(

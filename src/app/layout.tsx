@@ -1,14 +1,14 @@
 import Particles from "@/components/Particles";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
 import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Daniel.",
 };
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700", "900"],
+const roboto = Chakra_Petch({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 });
 

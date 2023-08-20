@@ -9,7 +9,8 @@ const ProjectsHeader = () => {
     problem-solving, creativity, and skill development. From creating really
     simple password generator to implementing more extensive user features for my web
     app like Prosta Matura, these all highlight my growth as a frontend enthusiast. 
-    The date next to the title means the last commit of specific project. Have fun with them!`;
+    The date next to the title means the last commit of specific project. Check my other
+    stuff in the GitHub and have fun with them!`;
   return (
     <SectionCard
       id="projects"

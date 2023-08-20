@@ -1,5 +1,6 @@
 import AboutMe from "@/components/AboutMe";
 import ContactMe from "@/components/ContactMe";
+import Education from "@/components/Education";
 import NameAnimation from "@/components/NameAnimation";
 import Projects from "@/components/Portfolio";
 
@@ -9,6 +10,7 @@ export default function Page() {
       <NameAnimation />
       <AboutMe />
       <Projects />
+      <Education />
       <ContactMe />
     </section>
   );

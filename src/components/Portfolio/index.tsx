@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <motion.section
       id="portfolio"
-      className="flex flex-col items-center w-full gap-5 md:gap-6 bg-secondary/60 scroll-mt-[100px]"
+      className="flex flex-col items-center w-full gap-5 md:gap-6scroll-mt-[100px]"
     >
       <ProjectsHeader />
       <ProjectsExamples />
