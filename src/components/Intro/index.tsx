@@ -11,7 +11,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
       key={index}
       initial={{
         opacity: 0,
-        letterSpacing: index === 1 ? "30px" : "1px",
+        letterSpacing: index === 1 ? "20px" : "1px",
       }}
       animate={{ opacity: 1 }}
       transition={{ delay: index * 0.2 }}
@@ -27,7 +27,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
         key={index}
         initial={{
           opacity: 0,
-          letterSpacing: index === 2 ? "30px" : "1px",
+          letterSpacing: index === 2 ? "20px" : "1px",
         }}
         animate={{ opacity: 1 }}
         transition={{ delay: index * 0.2 }}
@@ -86,6 +86,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
                 duration: 5,
                 ease: "linear",
               }}
+              className="flex items-center justify-center w-full overflow-hidden font-[800] sm:font-bold text-5xl sm:text-7xl md:text-8xl"
             >
               {welcomeElements}
             </motion.div>
@@ -96,7 +97,7 @@ const Intro = ({ handleClick }: { handleClick: () => void }) => {
           <motion.div className="flex items-center flex-col gap-2 justify-center w-full h-full font-bold text-primary drop-shadow-[5px_5px_10px_#d5fbf750]">
             {/* I'm Daniel */}
             <motion.div
-              className="flex items-center justify-center w-full overflow-hidden font-[800] sm:font-bold text-5xl sm:text-8xl"
+              className="flex items-center justify-center w-full overflow-hidden font-[800] sm:font-bold text-5xl sm:text-7xl md:text-8xl"
               animate={{
                 x: [
                   `${randomXYStyle(2, 1)}%`,
