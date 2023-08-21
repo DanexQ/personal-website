@@ -4,7 +4,7 @@ import MobileMenu from "./MobileMenu";
 
 const LINKS = [
   { url: "about", label: "About" },
-  { url: "portfolio", label: "Portfolio" },
+  { url: "projects", label: "Projects" },
   { url: "education", label: "Education" },
   { url: "contact", label: "Contact" },
 ];
@@ -23,7 +23,7 @@ const Nav = () => {
 
   return (
     <header className="sticky top-0 z-40">
-      <nav className="relative flex items-center justify-between max-w-[1200px] px-10 py-3 mx-auto text-base md:text-xl md:py-5 sm:px-3 max-w-3 z-40 bg-background text-text lg:px-0 ">
+      <nav className="relative flex items-center justify-between max-w-[1200px] sm:px-5 py-3 mx-auto text-base md:text-xl md:py-5 px-3 max-w-3 z-40 bg-background text-text lg:px-0 ">
         <h1 className="z-40">Daniel.</h1>
         <ul className="z-40 hidden gap-5 font-semibold sm:flex">
           {linksElements}

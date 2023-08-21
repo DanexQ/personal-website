@@ -1,27 +1,13 @@
 "use client";
-import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import CKZIU from "../../../public/CKZIU-Transparent.png";
+import SectionCard from "../SectionCard";
 
 const Education = () => {
   return (
-    <section
-      id="Education"
-      className={`flex flex-col items-center w-full gap-3 p-1 sm:p-5 md:gap-5 md:p-10 rounded-xl scroll-mt-[100px] backdrop-blur-[6px] md:max-w-[70%] text-text`}
-    >
-      <motion.h2
-        animate={{ opacity: [1, 0.5, 1] }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 5,
-        }}
-        className="md:w-[30%] text-4xl md:text-5xl gap-4 font-semibold md:font-bold flex flex-row md:flex-col  items-center"
-      >
-        Education
-      </motion.h2>
-      <div className="grid items-center content-center grid-cols-2 grid-rows-6">
+    <SectionCard id="education" header="Education" content="">
+      <div className="grid items-center content-center grid-cols-2 grid-rows-6 text-text md:max-w-[70%]">
         <h3 className="col-span-2 text-lg font-semibold text-center">
           Centrum for Vocational and Continuing Education in Zbąszynek
         </h3>
@@ -47,7 +33,7 @@ const Education = () => {
           abilities and a keen eye for detail.
         </p>
       </div>
-    </section>
+    </SectionCard>
   );
 };
 

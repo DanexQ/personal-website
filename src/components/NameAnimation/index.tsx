@@ -1,10 +1,6 @@
 "use client";
-import { wordAnimation } from "@/lib/letterAnimation";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import React, { useState } from "react";
-import GithubIcon from "./GithubIcon.svg";
-import Link from "next/link";
 import Links from "../Links";
 
 const NameAnimation = () => {
@@ -60,7 +56,7 @@ const NameAnimation = () => {
   ));
 
   return (
-    <motion.header
+    <motion.section
       animate={{ opacity: [1, 0.5, 1] }}
       transition={{
         repeat: Infinity,
@@ -122,7 +118,7 @@ const NameAnimation = () => {
           <Links />
         </motion.div>
       )}
-    </motion.header>
+    </motion.section>
   );
 };
 

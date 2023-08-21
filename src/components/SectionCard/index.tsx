@@ -4,17 +4,14 @@ import React from "react";
 const SectionCard = ({
   content,
   header,
-  reversed,
   id,
-  background = "bg-secondary/60",
+  children,
 }: {
   content: string;
-  header: string[];
-  reversed: boolean;
+  header: string;
   id: string;
-  background?: string;
+  children?: React.ReactNode;
 }) => {
-  const headerMobile = header[0] + " " + header[1];
   return (
     <section
       id={id}
@@ -27,13 +24,16 @@ const SectionCard = ({
           repeatType: "loop",
           duration: 5,
         }}
-        className="md:w-[30%] text-4xl md:text-5xl gap-4 font-semibold md:font-bold flex flex-row md:flex-col text-text items-center"
+        className="flex flex-row items-center gap-4 text-4xl font-semibold md:text-5xl md:font-bold md:flex-col text-text"
       >
-        {headerMobile}
+        {header}
       </motion.h2>
-      <p className="md:w-[70%] text-base md:text-lg text-text rounded-lg text-center">
-        {content}
-      </p>
+      {!!content && (
+        <p className="md:w-[70%] text-base md:text-lg text-text rounded-lg text-center">
+          {content}
+        </p>
+      )}
+      {children}
     </section>
   );
 };

@@ -1,10 +1,9 @@
 import Particles from "@/components/Particles";
 import "./globals.css";
 import { Chakra_Petch } from "next/font/google";
-import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Daniel.",
+  title: "Daniel aka DanexQ",
 };
 
 const roboto = Chakra_Petch({

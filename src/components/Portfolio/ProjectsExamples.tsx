@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const ProjectsExamples = () => {
   return (
-    <section className="flex flex-col gap-5 backdrop-blur-[6px] ">
+    <ul className="flex flex-col gap-5 backdrop-blur-[6px] mt-5">
       <ProjectCard
         title="Prosta Matura"
         url="https://prosta-matura.vercel.app/"
@@ -27,7 +27,6 @@ const ProjectsExamples = () => {
           "PlanetScale",
         ]}
       />
-      {/* <ProjectCard reverse={true} delayStart={1.5} /> */}
       <ProjectCard
         title="Professional qualifying exam repetition"
         url="https://infopraktycznyegzamin.netlify.app"
@@ -88,7 +87,7 @@ const ProjectsExamples = () => {
         }
         tools={["React", "Typescript", "Styled-Components"]}
       />
-    </section>
+    </ul>
   );
 };
 

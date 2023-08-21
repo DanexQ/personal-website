@@ -22,7 +22,7 @@ const ProjectCard = ({
   tools: string[];
 }) => {
   return (
-    <div className="flex flex-col items-center gap-5 rounded-lg sm:p-5 bg-secondary/20 md:flex-row">
+    <li className="flex flex-col items-center gap-5 rounded-lg sm:p-5 bg-secondary/20 md:flex-row">
       <Link
         href={url}
         target="_blank"
@@ -47,22 +47,26 @@ const ProjectCard = ({
         </h3>
         <p className="text-center md:text-justify">{content}</p>
         <div className="flex flex-col-reverse items-center justify-between w-full gap-3 mt-3 font-semibold sm:items-start sm:flex-row sm:gap-0 sm:mt-0">
-          <div className="flex gap-5 ">
-            <Link href={repoUrl} className="underline" target="_blank">
-              GitHub
-            </Link>
-            <Link href={url} className="underline" target="_blank">
-              Live
-            </Link>
-          </div>
-          <div className="flex flex-wrap justify-center gap-2">
+          <ul className="flex gap-5 ">
+            <li>
+              <Link href={repoUrl} className="underline" target="_blank">
+                GitHub
+              </Link>
+            </li>
+            <li>
+              <Link href={url} className="underline" target="_blank">
+                Live
+              </Link>
+            </li>
+          </ul>
+          <ul className="flex flex-wrap justify-center gap-2">
             {tools.map((tool, index) => (
-              <span key={index}>{tool}</span>
+              <li key={index}>{tool}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
