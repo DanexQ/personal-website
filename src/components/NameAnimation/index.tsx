@@ -13,7 +13,7 @@ const NameAnimation = () => {
   });
   const firstName = "Daniel";
   const lastName = "Szczepaniak";
-  const title = "Your Frontend Developer!";
+  const title = "Your Front-end Developer!";
 
   const firstNameElements = firstName.split("").map((char, index) => (
     <motion.span
