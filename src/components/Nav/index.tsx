@@ -33,9 +33,12 @@ const Nav = () => {
         <ul className="z-40 hidden gap-5 font-semibold sm:flex">
           {linksElements}
         </ul>
-        <button className="z-40 px-4 py-2 font-semibold transition-all rounded-md md:font-base bg-text/80 sm:bg-transparent text-secondary sm:text-text hover:text-secondary hover:bg-text/80 hover:font-bold">
+        <a
+          href="https://daniel-szczepaniak.vercel.app/CV.pdf"
+          className="z-40 px-4 py-2 font-semibold transition-all rounded-md md:font-base bg-text/80 sm:bg-transparent text-secondary sm:text-text hover:text-secondary hover:bg-text/80 hover:font-bold"
+        >
           CV
-        </button>
+        </a>
         <MobileMenu linksElements={[...linksElements]} />
       </nav>
     </header>
