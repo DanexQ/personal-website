@@ -2,29 +2,29 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+export type ProjectCardType = {
+  title: string;
+  content: string | React.ReactNode;
+  imageUrl: string;
+  liveUrl: string;
+  repoUrl: string;
+  lastCommit: string;
+  tools: string[];
+};
+
 const ProjectCard = ({
   title,
   content,
   imageUrl,
-  url,
-  reverse,
+  liveUrl,
   lastCommit,
   repoUrl,
   tools,
-}: {
-  title: string;
-  content: string | React.ReactNode;
-  imageUrl: string;
-  url: string;
-  repoUrl: string;
-  lastCommit: string;
-  reverse?: true;
-  tools: string[];
-}) => {
+}: ProjectCardType) => {
   return (
     <li className="flex flex-col items-center gap-5 rounded-lg sm:p-5 bg-secondary/20 md:flex-row">
       <Link
-        href={url}
+        href={liveUrl}
         target="_blank"
         className="relative border border-transparent hover:border-text max-w-[384px] max-h-[202px]"
       >
@@ -54,7 +54,7 @@ const ProjectCard = ({
               </Link>
             </li>
             <li>
-              <Link href={url} className="underline" target="_blank">
+              <Link href={liveUrl} className="underline" target="_blank">
                 Live
               </Link>
             </li>
