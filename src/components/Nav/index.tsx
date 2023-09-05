@@ -34,7 +34,7 @@ const Nav = () => {
           {linksElements}
         </ul>
         <a
-          href="https://daniel-szczepaniak.vercel.app/CV.pdf"
+          href="/CV.pdf"
           className="z-40 px-4 py-2 font-semibold transition-all rounded-md md:font-base bg-text/80 sm:bg-transparent text-secondary sm:text-text hover:text-secondary hover:bg-text/80 hover:font-bold"
         >
           CV

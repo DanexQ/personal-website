@@ -28,18 +28,12 @@ const ProjectCard = ({
         target="_blank"
         className="relative border border-transparent hover:border-text max-w-[384px] max-h-[202px]"
       >
-        <Image
-          src={imageUrl}
-          alt={title}
-          objectFit="contain"
-          width={384}
-          height={202}
-        />
+        <Image src={imageUrl} alt={title} width={384} height={202} />
       </Link>
       <div
         className={`flex-1 flex flex-col items-center sm:gap-2 md:items-start justify-center transition-all sm:px-4 text-text`}
       >
-        <h3 className="text-lg font-semibold ">
+        <h3 className="text-lg font-semibold">
           {title}{" "}
           <span className="block text-sm text-center sm:inline-block text-text/50">
             {lastCommit}
