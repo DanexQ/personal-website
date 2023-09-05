@@ -20,7 +20,7 @@ export default function Home() {
             }}
           />
         )}
-        {hideIntro && <motion.div key="faktyczna" />}
+        {hideIntro && <motion.div key="main" />}
       </AnimatePresence>
     </div>
   );
