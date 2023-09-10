@@ -8,7 +8,7 @@ const Particles = () => {
   const { width, height } = useWindowSize();
 
   const createParticles = useCallback((width: number, height: number) => {
-    return new Array(100).fill(0).map((_, index) => (
+    return new Array(25).fill(0).map((_, index) => (
       <motion.div
         key={index}
         initial={{ opacity: 0 }}
