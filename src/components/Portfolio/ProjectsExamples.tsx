@@ -3,15 +3,15 @@ import ProjectCard, { ProjectCardType } from "./ProjectCard";
 import Link from "next/link";
 
 const projectsDetails: ProjectCardType[] = [
-  {
-    title: "Sudoku game",
-    liveUrl: "https://unrivaled-babka-d8cb0c.netlify.app/",
-    repoUrl: "https://github.com/DanexQ/sudoku",
-    imageUrl: "/Sudoku.png",
-    lastCommit: "September 9 2023",
-    content: `Sudoku game created based on the Dosuku API. An application created to practice Axios, SASS and the Redux state management system. The game has different difficulty levels and an undo function.`,
-    tools: ["React", "Typescript", "SASS", "Redux", "Axios"],
-  },
+  // {
+  //   title: "Sudoku game",
+  //   liveUrl: "https://unrivaled-babka-d8cb0c.netlify.app/",
+  //   repoUrl: "https://github.com/DanexQ/sudoku",
+  //   imageUrl: "/Sudoku.png",
+  //   lastCommit: "September 9 2023",
+  //   content: `Sudoku game created based on the Dosuku API. An application created to practice Axios, SASS and the Redux state management system. The game has different difficulty levels and an undo function.`,
+  //   tools: ["React", "Typescript", "SASS", "Redux", "Axios"],
+  // },
   {
     title: "Prosta Matura",
     liveUrl: "https://prosta-matura.vercel.app/",
